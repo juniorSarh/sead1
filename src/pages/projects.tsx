@@ -361,7 +361,7 @@ function Projects() {
 
           {/* PROJECT CARDS */}
           <div className="projects-grid">
-            {filteredProjects.map((project, index) => {
+            {filteredProjects.map((project) => {
               const ProjectIcon = project.icon;
 
               return (

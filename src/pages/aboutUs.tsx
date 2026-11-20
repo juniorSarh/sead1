@@ -9,7 +9,7 @@ import {
   Target,
   Eye,
   GraduationCap,
-  BriefcaseBusiness,
+//   BriefcaseBusiness,
   Globe,
   ArrowRight,
   Mail,
