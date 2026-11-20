@@ -9,12 +9,14 @@ import Gallery from "./pages/gallery";
 import Projects from "./pages/projects";
 import Contact from "./pages/contacts";
 import AboutUs from "./pages/aboutUs";
+import ScrollToTop from "./components/ScrollToTop";
 
 import "./App.css"
 
 function App() {
   return (
     <BrowserRouter>
+    <ScrollToTop/>
      <div className="app-layout">
       <Navbar />
 
