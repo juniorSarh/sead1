@@ -399,7 +399,7 @@ function About() {
       </section>
 
       {/* PROGRAMME ASSOCIATES */}
-      <section className="about-associates section-padding">
+      {/* <section className="about-associates section-padding">
         <div className="about-container">
           <div className="about-section-heading">
             <span className="about-eyebrow">Our Extended Network</span>
@@ -432,7 +432,7 @@ function About() {
             Their inclusion here does not imply permanent employment by SEAD1.
           </p>
         </div>
-      </section>
+      </section> */}
 
       {/* STRATEGIC COLLABORATOR */}
       {/* <section className="about-collaborator section-padding">

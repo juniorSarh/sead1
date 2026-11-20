@@ -33,22 +33,22 @@ const socialLinks = [
     {
       name: "Facebook",
       icon: FaFacebookF,
-      url: "https://facebook.com/yourcompany",
+      url: "",
     },
     {
       name: "Instagram",
       icon: FaInstagram,
-      url: "https://instagram.com/yourcompany",
+      url: "",
     },
     {
       name: "LinkedIn",
       icon: FaLinkedinIn,
-      url: "https://linkedin.com/company/yourcompany",
+      url: "",
     },
     {
       name: "YouTube",
       icon: FaYoutube,
-      url: "https://youtube.com/@yourcompany",
+      url: "",
     },
   ];
   
