@@ -8,7 +8,6 @@ import {
   Users,
   Target,
   Eye,
-  Award,
   GraduationCap,
   BriefcaseBusiness,
   Globe,
@@ -20,83 +19,44 @@ import {
   Microscope,
   Building2,
 } from "lucide-react";
+
 import "./About.css";
 
-const values = [
+const teamMembers = [
   {
-    title: "Sustainability",
-    description:
-      "Protecting natural resources while supporting productive livelihoods and long-term development.",
-    icon: Leaf,
-  },
-  {
-    title: "Integrity",
-    description:
-      "Acting transparently, responsibly and accountably in our work and partnerships.",
-    icon: ShieldCheck,
-  },
-  {
-    title: "Empowerment",
-    description:
-      "Developing skills, confidence and economic opportunities for people and communities.",
-    icon: Users,
-  },
-  {
-    title: "Innovation",
-    description:
-      "Applying research, technology and practical solutions to development challenges.",
-    icon: Lightbulb,
-  },
-  {
-    title: "Collaboration",
-    description:
-      "Working with communities, government, institutions and industry to achieve shared goals.",
-    icon: Handshake,
-  },
-  {
-    title: "Excellence",
-    description:
-      "Striving to deliver professional, useful and verifiable results.",
-    icon: Award,
-  },
-];
-
-const coreTeam = [
-  {
+    initials: "HS",
     name: "Dr Harry Kofi Swatson",
-    position: "Founder, Chief Executive Officer & Managing Director",
+    role: "Founder, CEO & Managing Director",
     description:
-      "Agricultural scientist and strategic leader with more than 30 years of experience in skills development, programme delivery, project management and agricultural partnerships. Secretary of WPSA–African Poultry Network and chair of the PPC3 local organising committee.",
-    icon: Sprout,
-    featured: true,
+      "An agricultural scientist and strategic leader with over 30 years of experience in skills development, programme delivery, project management and agricultural partnerships.",
   },
   {
+    initials: "JM",
     name: "Jeffrey Mthwalo",
-    position: "Technical Adviser – BEE & Food Security",
+    role: "Technical Adviser – BEE & Food Security",
     description:
-      "Provides specialist advice for food-security and development initiatives.",
-    icon: Leaf,
+      "Provides specialist technical advice and support for food-security initiatives and inclusive agricultural development programmes.",
   },
   {
+    initials: "XZ",
     name: "Xolani Zulu",
-    position: "Financial Adviser",
+    role: "Financial Adviser",
     description:
-      "Supports financial and commercial advisory requirements.",
-    icon: BriefcaseBusiness,
+      "Provides financial and commercial advisory support for SEAD1's organisational and development initiatives.",
   },
   {
+    initials: "SG",
     name: "Sabelo Gumede",
-    position: "IT Support & Digital Systems",
+    role: "IT Support & Digital Systems",
     description:
-      "Supports digital platforms, website and information-technology needs.",
-    icon: Building2,
+      "Supports digital platforms, website development and the organisation's information technology requirements.",
   },
   {
+    initials: "TG",
     name: "Thulisile Audrey Gobhozi",
-    position: "Capacity & Skills Development Officer",
+    role: "Capacity & Skills Development Officer",
     description:
-      "Supports agricultural training, capacity-development coordination and project activities.",
-    icon: GraduationCap,
+      "Supports agricultural training, capacity-development coordination and the implementation of project activities.",
   },
 ];
 
@@ -131,42 +91,81 @@ const programmeAssociates = [
   },
 ];
 
-const experienceAreas = [
+const values = [
   {
-    title: "Farmer Support & Food Security",
+    icon: Leaf,
+    title: "Sustainability",
     description:
-      "Contributions to farmer-support initiatives under the Presidential Employment Stimulus, including agricultural inputs, training and project coordination.",
+      "Promoting responsible agricultural practices and environmental stewardship for future generations.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Integrity",
+    description:
+      "Conducting our work with honesty, transparency, accountability and professionalism.",
+  },
+  {
+    icon: Users,
+    title: "Empowerment",
+    description:
+      "Building the knowledge, skills and confidence of individuals, farmers and communities.",
+  },
+  {
+    icon: Lightbulb,
+    title: "Innovation",
+    description:
+      "Applying practical, creative and evidence-informed solutions to development challenges.",
+  },
+  {
+    icon: Handshake,
+    title: "Collaboration",
+    description:
+      "Building meaningful partnerships with communities, institutions and development organisations.",
+  },
+  {
+    icon: CheckCircle2,
+    title: "Excellence",
+    description:
+      "Striving for quality, measurable impact and continuous improvement in everything we do.",
+  },
+];
+
+const experience = [
+  {
     icon: Tractor,
+    title: "Agricultural Development",
+    description:
+      "Farmer support initiatives, production inputs, agricultural infrastructure and capacity building.",
   },
   {
-    title: "Digital Agricultural Innovation",
-    description:
-      "Professional involvement in digital agricultural e-voucher distribution through MSN Agric and Vodacom/Mezzanine.",
-    icon: Microscope,
-  },
-  {
-    title: "Education & Community Development",
-    description:
-      "Contributions to DUT school-garden, community agriculture and Green Campus initiatives.",
     icon: GraduationCap,
+    title: "Education & Skills Development",
+    description:
+      "School agriculture programmes, practical training, learner development and community outreach.",
   },
   {
-    title: "Agricultural Investment Planning",
-    description:
-      "Agricultural development planning and feasibility work in Kasai, Democratic Republic of the Congo.",
-    icon: BriefcaseBusiness,
-  },
-  {
-    title: "Environmental Restoration",
-    description:
-      "Technical support for AFR100 forest and landscape restoration monitoring across African countries.",
-    icon: Trees,
-  },
-  {
-    title: "African Agricultural Partnerships",
-    description:
-      "Poultry science engagement through WPSA–APN, including PPC3 in Pretoria in 2025 and the planned PPC4 in Ghana in 2027.",
     icon: Globe,
+    title: "International Development",
+    description:
+      "Agricultural feasibility planning and development initiatives in the Democratic Republic of Congo.",
+  },
+  {
+    icon: Trees,
+    title: "Environmental Sustainability",
+    description:
+      "Forest and landscape restoration monitoring, spatial data management and environmental development.",
+  },
+  {
+    icon: Microscope,
+    title: "Research & Knowledge Exchange",
+    description:
+      "Applied research, technical collaboration and participation in agricultural science networks.",
+  },
+  {
+    icon: Building2,
+    title: "Strategic Partnerships",
+    description:
+      "Working with universities, development organisations, public institutions and private-sector partners.",
   },
 ];
 
@@ -175,59 +174,68 @@ function About() {
     <main className="about-page">
       {/* HERO SECTION */}
       <section className="about-hero">
-        <div className="about-hero-overlay">
-          <div className="about-container about-hero-content">
-            <span className="about-eyebrow">Get to Know Us</span>
+        <div className="about-hero-overlay" />
 
-            <h1>About SEAD1</h1>
+        <div className="about-container about-hero-content">
+          <span className="about-eyebrow about-hero-eyebrow">
+            Who We Are
+          </span>
 
-            <h2>
-              Transforming Africa’s Land, Livelihoods and Learning
-            </h2>
+          <h1>
+            About <span>SEAD1</span>
+          </h1>
 
-            <p>
-              Advancing sustainable agriculture, environmental development
-              and empowered communities through knowledge, partnerships and
-              practical solutions.
-            </p>
+          <p className="about-hero-subtitle">
+            Sankofa Environmental and Agricultural Development
+          </p>
 
-            <NavLink to="/contact" className="about-primary-button">
-              Partner With Us
+          <p className="about-hero-description">
+            Transforming Africa's Land, Livelihoods and Learning through
+            sustainable agriculture, environmental development, practical
+            education and strategic partnerships.
+          </p>
+
+          <div className="about-hero-buttons">
+            <NavLink to="/projects" className="about-btn about-btn-primary">
+              Explore Our Projects
               <ArrowRight size={18} />
+            </NavLink>
+
+            <NavLink to="/contact" className="about-btn about-btn-outline">
+              Contact Us
             </NavLink>
           </div>
         </div>
       </section>
 
       {/* WHO WE ARE */}
-      <section className="about-who">
-        <div className="about-container about-who-grid">
-          <div className="about-who-image">
+      <section className="about-intro section-padding">
+        <div className="about-container about-intro-grid">
+          <div className="about-intro-image">
             <img
-              src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1000&q=85"
-              alt="Agricultural landscape representing sustainable farming and development"
+              src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=1100&q=85"
+              alt="Green agricultural fields and sustainable farming landscape"
             />
 
             <div className="about-image-caption">
               <Sprout size={25} />
               <div>
                 <strong>Growing Sustainable Futures</strong>
-                <span>Agriculture • Environment • Community</span>
+                <span>People, Agriculture and the Environment</span>
               </div>
             </div>
           </div>
 
-          <div className="about-who-content">
-            <span className="about-section-label">Who We Are</span>
+          <div className="about-intro-content">
+            <span className="about-eyebrow">About Our Organisation</span>
 
             <h2>
-              Building Sustainable Futures Through
-              <span> Agriculture and Development</span>
+              Who <span>We Are</span>
             </h2>
 
             <p>
-              Sankofa Environmental and Agricultural Development (SEAD1) is
-              a South African agricultural and environmental development
+              Sankofa Environmental and Agricultural Development (SEAD1) is a
+              South African agricultural and environmental development
               consultancy focused on sustainable agriculture, community
               empowerment, applied research, capacity building and project
               delivery.
@@ -235,29 +243,37 @@ function About() {
 
             <p>
               Led by Dr Harry Kofi Swatson, SEAD1 combines decades of
-              professional agricultural development expertise with a
-              flexible network of advisers and specialist practitioners.
+              professional expertise with a flexible network of advisers and
+              specialist practitioners to deliver practical, development-
+              focused solutions.
             </p>
 
             <p>
-              Our work links research, practical training, procurement and
-              supply-chain coordination, enterprise planning and
-              stakeholder engagement to advance food security and
-              sustainable livelihoods.
+              Our approach connects research, practical training, procurement
+              and supply-chain coordination, enterprise planning and
+              stakeholder engagement. We work to turn development ideas into
+              meaningful outcomes for farmers, communities and institutions.
             </p>
 
-            <div className="about-who-highlights">
+            <div className="about-intro-highlights">
               <div>
                 <CheckCircle2 size={19} />
-                <span>Sustainable agricultural development</span>
+                <span>Sustainable Agricultural Development</span>
               </div>
+
               <div>
                 <CheckCircle2 size={19} />
-                <span>Community empowerment and skills development</span>
+                <span>Community Empowerment</span>
               </div>
+
               <div>
                 <CheckCircle2 size={19} />
-                <span>Research, partnerships and project delivery</span>
+                <span>Research and Capacity Building</span>
+              </div>
+
+              <div>
+                <CheckCircle2 size={19} />
+                <span>Strategic Project Delivery</span>
               </div>
             </div>
           </div>
@@ -265,14 +281,15 @@ function About() {
       </section>
 
       {/* VISION AND MISSION */}
-      <section className="about-purpose">
+      <section className="about-purpose section-padding">
         <div className="about-container">
           <div className="about-section-heading">
-            <span className="about-section-label">Our Purpose</span>
-            <h2>Driven by a Clear Vision and Mission</h2>
+            <span className="about-eyebrow">Our Purpose</span>
+            <h2>Our Vision & Mission</h2>
             <p>
-              Our direction is guided by a commitment to inclusive
-              development, environmental responsibility and lasting impact.
+              Our purpose is rooted in building resilient communities,
+              strengthening agricultural systems and supporting sustainable
+              development.
             </p>
           </div>
 
@@ -282,26 +299,21 @@ function About() {
                 <Eye size={30} />
               </div>
 
-              <span>Our Vision</span>
-
-              <h3>A Sustainable and Empowered Africa</h3>
+              <h3>Our Vision</h3>
 
               <p>
                 To be a trusted African leader in sustainable agricultural
-                and environmental development, transforming communities
-                into resilient, productive and economically empowered
-                societies.
+                and environmental development, transforming communities into
+                resilient, productive and economically empowered societies.
               </p>
             </article>
 
-            <article className="about-purpose-card mission-card">
+            <article className="about-purpose-card">
               <div className="about-purpose-icon">
                 <Target size={30} />
               </div>
 
-              <span>Our Mission</span>
-
-              <h3>Turning Knowledge into Action</h3>
+              <h3>Our Mission</h3>
 
               <p>
                 To advance food security, environmental sustainability and
@@ -314,26 +326,26 @@ function About() {
         </div>
       </section>
 
-      {/* VALUES */}
-      <section className="about-values">
+      {/* CORE VALUES */}
+      <section className="about-values section-padding">
         <div className="about-container">
           <div className="about-section-heading">
-            <span className="about-section-label">What Guides Us</span>
+            <span className="about-eyebrow">What Guides Us</span>
             <h2>Our Core Values</h2>
             <p>
-              The principles that shape our decisions, partnerships and
-              approach to development.
+              The principles that shape our relationships, decisions and
+              commitment to development.
             </p>
           </div>
 
           <div className="about-values-grid">
             {values.map((value) => {
-              const ValueIcon = value.icon;
+              const Icon = value.icon;
 
               return (
                 <article className="about-value-card" key={value.title}>
                   <div className="about-value-icon">
-                    <ValueIcon size={26} />
+                    <Icon size={27} />
                   </div>
 
                   <h3>{value.title}</h3>
@@ -345,173 +357,170 @@ function About() {
         </div>
       </section>
 
-      {/* TEAM */}
-      <section className="about-team" id="our-team">
+      {/* MEET OUR TEAM */}
+      <section className="about-team section-padding">
         <div className="about-container">
           <div className="about-section-heading">
-            <span className="about-section-label">The People Behind SEAD1</span>
+            <span className="about-eyebrow">The People Behind SEAD1</span>
             <h2>Meet Our Team</h2>
             <p>
-              SEAD1 is led by a core management and support team and engages
-              additional specialists for specific assignments.
+              Our work is driven by a team of professionals and specialist
+              advisers bringing together knowledge, experience and a shared
+              commitment to sustainable development.
             </p>
           </div>
 
-          <div className="about-team-note">
-            <Users size={21} />
-            <p>
-              The listings below distinguish named team functions from
-              project-based technical assignments; they should not be taken
-              as a legal employment register.
-            </p>
-          </div>
-
-          {/* LEADERSHIP AND CORE SUPPORT */}
-          <div className="about-team-subheading">
-            <span className="about-section-label">Leadership and Core Support</span>
-            <h3>Our Management and Support Team</h3>
-          </div>
-
-          <div className="about-core-team-grid">
-            {coreTeam.map((member) => {
-              const MemberIcon = member.icon;
-
-              return (
-                <article
-                  className={`about-member-card ${
-                    member.featured ? "featured-member" : ""
-                  }`}
-                  key={member.name}
-                >
-                  <div className="about-member-icon">
-                    <MemberIcon size={29} />
+          <div className="about-team-grid">
+            {teamMembers.map((member) => (
+              <article className="about-team-card" key={member.name}>
+                <div className="about-team-card-image">
+                  <div className="about-team-initials">
+                    {member.initials}
                   </div>
+                </div>
 
-                  {member.featured && (
-                    <span className="about-member-tag">Founder & Leadership</span>
-                  )}
+                <div className="about-team-card-content">
+                  <h3>{member.name}</h3>
 
-                  <h4>{member.name}</h4>
-                  <span className="about-member-position">
-                    {member.position}
-                  </span>
+                  <span className="about-team-role">{member.role}</span>
+
                   <p>{member.description}</p>
-                </article>
-              );
-            })}
+                </div>
+              </article>
+            ))}
           </div>
 
-          {/* TECHNICAL ASSOCIATES */}
-          <div className="about-team-subheading associates-heading">
-            <span className="about-section-label">
-              Technical Training and Programme Associates
-            </span>
-            <h3>Our Specialist Associates</h3>
-            <p>
-              Specialist functions drawn from training-provider and
-              project-delivery arrangements.
-            </p>
-          </div>
-
-          <div className="about-associates-table-wrapper">
-            <table className="about-associates-table">
-              <thead>
-                <tr>
-                  <th>Team Member</th>
-                  <th>Programme Function</th>
-                </tr>
-              </thead>
-
-              <tbody>
-                {programmeAssociates.map((associate) => (
-                  <tr key={associate.name}>
-                    <td>{associate.name}</td>
-                    <td>{associate.role}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-
-          <p className="about-associates-disclaimer">
-            These specialist functions are drawn from training-provider and
-            project-delivery arrangements. Individual engagements and current
-            titles should be checked before publication as permanent SEAD1
-            staff.
+          <p className="about-team-note">
+            SEAD1 works with a flexible network of professionals and
+            specialist advisers. Roles and engagements may vary according
+            to organisational and project requirements.
           </p>
-
-          {/* STRATEGIC COLLABORATOR */}
-          <div className="about-team-subheading collaborator-heading">
-            <span className="about-section-label">
-              Strategic Technical Collaborators
-            </span>
-            <h3>Working Through Specialist Partnerships</h3>
-          </div>
-
-          <article className="about-collaborator-card">
-            <div className="about-collaborator-icon">
-              <Handshake size={30} />
-            </div>
-
-            <div>
-              <h4>Dr Kofi Gyan Quartey</h4>
-              <span>Environmental and Geospatial Development Collaborator</span>
-
-              <p>
-                Worked with Dr Swatson on SEAD1’s Kasai (DRC) agricultural
-                feasibility assignment and is associated with AUDA-NEPAD
-                AFR100 work contracted through Green Angel Innovations 88.
-              </p>
-
-              <p className="about-collaborator-note">
-                This is a collaboration rather than a confirmed permanent
-                SEAD1 employment appointment.
-              </p>
-            </div>
-          </article>
         </div>
       </section>
 
-      {/* EXPERIENCE */}
-      <section className="about-experience">
+      {/* PROGRAMME ASSOCIATES */}
+      <section className="about-associates section-padding">
         <div className="about-container">
           <div className="about-section-heading">
-            <span className="about-section-label">Our Experience in Action</span>
-            <h2>Making a Difference Through Practical Work</h2>
+            <span className="about-eyebrow">Our Extended Network</span>
+            <h2>Technical Training & Programme Associates</h2>
             <p>
-              Our leadership and collaborators have contributed to
-              agricultural, environmental, educational and partnership
-              initiatives across Africa.
+              We draw on specialist programme and training expertise to
+              support quality learning, assessment, facilitation and
+              agricultural project delivery.
+            </p>
+          </div>
+
+          <div className="about-associates-grid">
+            {programmeAssociates.map((associate) => (
+              <article className="about-associate-card" key={associate.name}>
+                <div className="about-associate-icon">
+                  <GraduationCap size={23} />
+                </div>
+
+                <div>
+                  <h3>{associate.name}</h3>
+                  <p>{associate.role}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <p className="about-associates-note">
+            Programme associates may be engaged through specific
+            training-provider, project-delivery or facilitation arrangements.
+            Their inclusion here does not imply permanent employment by SEAD1.
+          </p>
+        </div>
+      </section>
+
+      {/* STRATEGIC COLLABORATOR */}
+      {/* <section className="about-collaborator section-padding">
+        <div className="about-container">
+          <div className="about-collaborator-card">
+            <div className="about-collaborator-icon">
+              <Globe size={35} />
+            </div>
+
+            <div className="about-collaborator-content">
+              <span className="about-eyebrow">
+                Specialist Collaboration
+              </span>
+
+              <h2>Strategic Technical Collaborator</h2>
+
+              <h3>Dr Kofi Gyan Quartey</h3>
+
+              <span className="about-collaborator-role">
+                Environmental and Geospatial Development Collaborator
+              </span>
+
+              <p>
+                Dr Kofi Gyan Quartey has collaborated with Dr Swatson on
+                development assignments involving agricultural planning,
+                environmental development and geospatial expertise.
+              </p>
+
+              <p>
+                His collaboration includes the SEAD1 Kasai agricultural
+                feasibility assignment in the Democratic Republic of Congo
+                and association with AUDA-NEPAD AFR100 forest and landscape
+                restoration work undertaken through Green Angel Innovations
+                88.
+              </p>
+
+              <p className="about-collaborator-note">
+                This collaboration reflects a specialist working
+                relationship and does not imply permanent employment by
+                SEAD1.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section> */}
+
+      {/* EXPERIENCE */}
+      <section className="about-experience section-padding">
+        <div className="about-container">
+          <div className="about-section-heading">
+            <span className="about-eyebrow">Our Work in Action</span>
+            <h2>Experience in Development</h2>
+            <p>
+              Our experience spans agricultural production, education,
+              environmental sustainability, research and strategic
+              development partnerships.
             </p>
           </div>
 
           <div className="about-experience-grid">
-            {experienceAreas.map((area) => {
-              const AreaIcon = area.icon;
+            {experience.map((item) => {
+              const Icon = item.icon;
 
               return (
-                <article className="about-experience-card" key={area.title}>
+                <article
+                  className="about-experience-card"
+                  key={item.title}
+                >
                   <div className="about-experience-icon">
-                    <AreaIcon size={27} />
+                    <Icon size={28} />
                   </div>
 
-                  <h3>{area.title}</h3>
-                  <p>{area.description}</p>
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
                 </article>
               );
             })}
           </div>
 
-          <div className="about-project-link">
+          <div className="about-experience-footer">
             <p>
-              Discover more about the initiatives and professional
-              engagements represented in our portfolio.
+              Our experience includes farmer support initiatives under the
+              Presidential Employment Stimulus, MSN Agric and Vodacom/
+              Mezzanine digital agricultural e-vouchers, DUT school and
+              community agriculture initiatives, DRC agricultural planning,
+              AUDA-NEPAD AFR100 restoration work and Pan-African poultry
+              science engagements.
             </p>
-
-            <NavLink to="/projects">
-              Explore Our Projects
-              <ArrowRight size={18} />
-            </NavLink>
           </div>
         </div>
       </section>
@@ -520,29 +529,29 @@ function About() {
       <section className="about-cta">
         <div className="about-container about-cta-content">
           <div>
-            <span className="about-eyebrow">Work With Us</span>
-            <h2>Let's Create Lasting Development Outcomes</h2>
+            <span className="about-eyebrow">Let's Work Together</span>
+
+            <h2>
+              Building Sustainable Futures Through Partnership
+            </h2>
+
             <p>
-              We collaborate with government agencies, development
-              organisations, universities, agricultural enterprises and
-              community groups to turn practical ideas into lasting
-              development outcomes.
+              Whether you are a development organisation, government
+              institution, university, agricultural enterprise or community
+              group, we welcome opportunities to collaborate.
             </p>
           </div>
 
           <div className="about-cta-actions">
-            <NavLink to="/contact" className="about-primary-button">
+            <NavLink to="/contact" className="about-btn about-btn-light">
+              <Mail size={18} />
               Contact SEAD1
-              <ArrowRight size={18} />
             </NavLink>
 
-            <a
-              href="mailto:Harry.sead1@gmail.com"
-              className="about-email-link"
-            >
-              <Mail size={17} />
-              Harry.sead1@gmail.com
-            </a>
+            <NavLink to="/projects" className="about-btn about-btn-cta-outline">
+              View Our Projects
+              <ArrowRight size={18} />
+            </NavLink>
           </div>
         </div>
       </section>
