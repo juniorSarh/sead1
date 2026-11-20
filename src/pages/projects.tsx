@@ -1,5 +1,4 @@
-
-import React, { useState } from "react";
+import { useState, type ElementType } from "react";
 import { NavLink } from "react-router-dom";
 import {
   Sprout,
@@ -12,11 +11,10 @@ import {
   ArrowRight,
   CalendarDays,
   MapPin,
+  BriefcaseBusiness,
   Users,
   Handshake,
-  BriefcaseBusiness,
 } from "lucide-react";
-
 import "./Projects.css";
 
 type ProjectCategory = "past" | "ongoing" | "upcoming";
@@ -29,219 +27,216 @@ interface Project {
   description: string;
   role: string;
   category: ProjectCategory;
-  icon: React.ElementType;
+  icon: ElementType;
+  status?: string;
+  attribution?: string;
 }
 
 const projects: Project[] = [
-
-  // =========================
   // PAST PROJECTS
-  // =========================
-
   {
-    title: "Zimisele Senior Primary School",
+    title: "Zimisele Senior Primary School – Organic Farming Initiative",
     location: "uMlazi, KwaZulu-Natal",
     period: "2026",
-    theme: "Growing Future Generations",
+    theme: "Growing Future Generations — Education & Youth",
     description:
-      "A DUT ICM-funded organic farming initiative. On 18 November 2026, learners, educators and parents participated in a workshop exploring garden sustainability, organic production, entrepreneurship and practical seed sowing. Ten pictorial learning manuals informed the training.",
+      "Dr Harry Swatson served as technical agricultural facilitator for a participatory workshop held on 18 November 2026. Learners, educators and parents explored garden sustainability, organic production, entrepreneurship and practical seed sowing. Ten pictorial learning manuals informed the training. The project is led by Dr Nhleko, DUT ICM, with the DUT Green Campus Initiative and school participants.",
     role:
-      "Dr Harry Swatson served as technical agricultural facilitator. The project was led by Dr Nhleko, DUT ICM, with the DUT Green Campus Initiative and school participants.",
+      "Leadership delivery through DUT-linked collaboration; training report available.",
     category: "past",
     icon: GraduationCap,
   },
-
   {
     title: "DUT School and Community Agriculture Outreach",
-    location: "Greater Edendale and Nkandla",
+    location: "Greater Edendale and Nkandla, KwaZulu-Natal",
     period: "2022–2023",
-    theme: "Growing Future Generations",
+    theme: "Growing Future Generations — Education & Youth",
     description:
-      "Supported school and community gardens in Greater Edendale through agricultural training, seedlings and equipment support. Also delivered agricultural and innovation-focused training to 18 communities and institutions in Nkandla, covering vegetable production, drone applications, Fourth Industrial Revolution technology and composting.",
+      "Dr Swatson supported school and community gardens in Greater Edendale through training, seedling and equipment support while serving as agricultural specialist at the DUT innobiz Centre for Entrepreneurship and Innovation. He also delivered agricultural and innovation-focused training to 18 communities and institutions in Nkandla, covering vegetable production, drone applications, fourth-industrial-revolution technology and composting.",
     role:
-      "Dr Swatson's previous institutional assignment as an agricultural specialist at the DUT innobiz Centre for Entrepreneurship and Innovation. Not represented as a SEAD1 contract.",
+      "Founder’s prior DUT institutional assignment, not represented as a SEAD1 contract.",
     category: "past",
-    icon: Sprout,
+    icon: GraduationCap,
   },
-
   {
-    title: "DUT Green Campus and Student-Residence Sustainability",
+    title: "DUT Green Campus and Student-Residence Sustainability Initiatives",
     location: "Durban, KwaZulu-Natal",
-    period: "Details to be confirmed",
-    theme: "Environmental Awareness",
+    period: "16 - 20 - 2026",
+    theme: "Growing Future Generations — Education & Youth",
     description:
-      "Environmental awareness and green-campus activities, including sustainability engagement in student residences.",
-    role:
-      "Founder and partner engagement. Specific dates, activities and outputs require verification before publication as a detailed case study.",
+      "Facilitation of student-facing environmental awareness and green-campus activities, including sustainability engagement in student residences. Specific dates, activities and outputs should be confirmed before publishing this work as a full case study.",
+    role: "Founder and partner engagement.",
+    attribution:
+      "Specific project details and outputs still require verification.",
     category: "past",
     icon: Leaf,
   },
-
   {
-    title: "Presidential Employment Stimulus / PESI",
+    title: "Presidential Employment Stimulus (PESI) – Agricultural Production Inputs and Farmer Support",
     location: "KwaZulu-Natal",
     period: "2022–2024",
-    theme: "Empowering Farmers",
+    theme: "Empowering Farmers — Inputs & Food Security",
     description:
-      "Agricultural production inputs and farmer support, including procurement, supply and delivery of agricultural inputs and services, training, mentorship and logistical support for farmer production support units and irrigation projects.",
+      "SEAD1-linked project coordination covered the procurement, supply and delivery of agricultural inputs and services, together with training, mentorship and logistical support for farmer production support units and irrigation projects in KwaZulu-Natal. The associated CV records multiple separately budgeted assignments.",
     role:
-      "SEAD1-linked project coordination. Roles and contracting arrangements differed across SEAD1 and TEAD-linked projects.",
+      "Roles and contracting arrangements differ across SEAD1 and TEAD-linked projects.",
+    attribution:
+      "Individual assignments should be distinguished and budgets should not be aggregated without verification.",
     category: "past",
     icon: Tractor,
   },
-
   {
-    title: "Vodacom / Mezzanine Agricultural E-Vouchers",
-    location: "Pietermaritzburg and Cape Town",
+    title: "Vodacom / Mezzanine Agricultural E-Vouchers with MSN Agric",
+    location: "Pietermaritzburg and Cape Town, South Africa",
     period: "2023–2024",
-    theme: "Empowering Farmers",
+    theme: "Empowering Farmers — Inputs & Food Security",
     description:
-      "Supported the establishment and operation of MSN Agric redemption points, enabling farmers to exchange approved digital vouchers for agricultural commodities and production inputs.",
-    role:
-      "Dr Swatson conducted this work through MSN Agric, not as a direct SEAD1 contract.",
+      "Dr Swatson supported the establishment and operation of MSN Agric redemption points, enabling farmers to exchange approved digital vouchers for agricultural commodities and production inputs.",
+    role: "Work conducted through MSN Agric.",
+    attribution: "This was not a direct SEAD1 contract.",
     category: "past",
-    icon: BriefcaseBusiness,
+    icon: Building2,
   },
-
   {
     title: "Kwabiyela Red Meat Project",
-    location: "King Cetshwayo District",
+    location: "King Cetshwayo District, KwaZulu-Natal",
     period: "2022",
-    theme: "Transforming Rural Enterprises",
+    theme: "Transforming Rural Agricultural Enterprises",
     description:
-      "Coordination of capacity-building support, livestock inputs, business planning and procurement of operational resources, including a farm truck.",
-    role:
-      "SEAD1 is listed as the contracted organisation.",
+      "Coordination of capacity-building support, livestock inputs, business planning and procurement of operational resources, including a farm truck, to support the development of the red meat enterprise.",
+    role: "The CV lists SEAD1 as the contracted organisation.",
     category: "past",
     icon: Tractor,
   },
-
   {
     title: "Isithombo Piggery Project",
-    location: "King Cetshwayo District",
+    location: "King Cetshwayo District, KwaZulu-Natal",
     period: "2022",
-    theme: "Transforming Rural Enterprises",
+    theme: "Transforming Rural Agricultural Enterprises",
     description:
-      "Supported piggery development through procurement of pig breeding stock, feed and a trailer, alongside technical and capacity-building support.",
-    role:
-      "SEAD1 is listed as the contracted organisation.",
+      "Coordinated the procurement of pig breeding stock, feed and a trailer alongside technical assistance and capacity-building support for the piggery enterprise.",
+    role: "The CV lists SEAD1 as the contracted organisation.",
     category: "past",
     icon: Sprout,
   },
-
   {
     title: "Drakensberg Beekeeping Academy",
     location: "KwaZulu-Natal",
     period: "2022",
-    theme: "Transforming Rural Enterprises",
+    theme: "Transforming Rural Agricultural Enterprises",
     description:
-      "Supported apiculture capacity building and procurement of beehives, extractors, equipment and personal protective equipment.",
-    role:
-      "SEAD1 is listed as the contracted organisation.",
+      "Supported apiculture capacity building and the procurement of beekeeping hives, honey extractors, equipment and personal protective equipment.",
+    role: "The CV lists SEAD1 as the contracted organisation.",
     category: "past",
     icon: Leaf,
   },
-
   {
-    title: "Zibuke Community Trust",
+    title: "Zibuke Community Trust and Malenge Farmers Association",
     location: "KwaZulu-Natal",
     period: "2021–2022",
-    theme: "Transforming Rural Enterprises",
+    theme: "Transforming Rural Agricultural Enterprises",
     description:
-      "Agricultural project coordination covering seeds, fertilisers, chemicals, farm implements, logistics and training support.",
-    role:
-      "SEAD1-linked assignment. Listed separately from the Malenge Farmers Association assignment.",
+      "Agricultural project coordination covering the procurement and supply of seeds, fertilisers, chemicals and farm implements, together with logistics and training support for the participating farming groups.",
+    role: "Separate SEAD1-linked assignments.",
+    attribution:
+      "The two assignments are grouped here for the portfolio overview and can be described separately in a detailed project record.",
     category: "past",
     icon: Users,
   },
-
-  {
-    title: "Malenge Farmers Association",
-    location: "KwaZulu-Natal",
-    period: "2021–2022",
-    theme: "Transforming Rural Enterprises",
-    description:
-      "Agricultural project coordination involving agricultural inputs, farm implements, logistical arrangements and training support.",
-    role:
-      "Separate SEAD1-linked assignment.",
-    category: "past",
-    icon: Sprout,
-  },
-
   {
     title: "Farmer Production Support Units (FPSUs)",
-    location: "Hluhluwe, Hlabisa, Clanso, Jikijela, Hlathikhulu and Tugela Ferry",
+    location:
+      "Hluhluwe, Hlabisa, Clanso, Jikijela, Hlathikhulu and Tugela Ferry",
     period: "2019–2023",
-    theme: "Transforming Rural Enterprises",
+    theme: "Transforming Rural Agricultural Enterprises",
     description:
-      "Support for farmer production support units through business planning, livestock and crop production inputs, transport vehicles and capacity building.",
-    role:
-      "Individual assignments are listed in the founder's professional CV.",
+      "Support for farmer production support units through business planning, livestock and crop production inputs, transport vehicles and capacity-building activities.",
+    role: "Individual assignments are listed in the founder’s CV.",
     category: "past",
     icon: Tractor,
   },
-
   {
     title: "Kasai Agricultural Development and Agri-City Feasibility",
-    location: "Kasai, Democratic Republic of Congo",
+    location: "Kasai, Democratic Republic of the Congo",
     period: "2024",
     theme: "Unlocking Agricultural Investment",
     description:
-      "A 12,000-hectare agricultural development feasibility study and business plan for integrated maize, sunflower and bean production with a proposed Agri-City concept. Scope included market analysis, financial projections, operational planning and risk analysis.",
-    role:
-      "Direct SEAD1 assignment for Zorea Africa. Feasibility work completed; physical development is not claimed as completed.",
+      "SEAD1 developed an investment-focused feasibility study and business plan for a proposed 12,000-hectare integrated agricultural development involving maize, sunflower and beans, alongside an Agri-City concept. The scope included market analysis, financial projections, operational planning and risk analysis.",
+    role: "Direct SEAD1 assignment for Zorea Africa.",
+    attribution:
+      "The feasibility study is completed; the physical development is not claimed as completed.",
     category: "past",
-    icon: Building2,
+    icon: BriefcaseBusiness,
   },
-
   {
-    title: "AUDA-NEPAD AFR100 Forest and Landscape Restoration",
+    title: "AUDA-NEPAD AFR100 Forest and Landscape Restoration Monitoring",
     location: "Malawi, Kenya, Nigeria and Tanzania",
     period: "2024–2025",
-    theme: "Restoring Landscapes",
+    theme: "Restoring Landscapes — Building Climate Resilience",
     description:
-      "Supported the collection, collation, spatial-data management and analysis of forest and landscape restoration information across four African countries.",
-    role:
-      "Partner-delivered assignment contracted to Green Angel Innovations 88.",
+      "Dr Swatson supported Green Angel Innovations 88 with the collection, collation, spatial-data management and analysis of forest and landscape restoration information across four African countries.",
+    role: "Partner-delivered assignment contracted to Green Angel Innovations 88.",
     category: "past",
     icon: Trees,
   },
-
   {
     title: "3rd Pan-African Poultry Conference (PPC3)",
-    location: "Future Africa, University of Pretoria",
+    location: "Future Africa, University of Pretoria, South Africa",
     period: "22–23 September 2025",
-    theme: "Connecting Africa Through Agricultural Science",
+    theme: "Connecting Africa — Poultry Science",
     description:
-      "A continental poultry science conference supporting collaboration, research exchange and industry engagement. Activities included conference planning, partnerships, sponsorship and coordination.",
+      "The conference brought together poultry science, industry and policy stakeholders at Future Africa, University of Pretoria. Dr Swatson served as Secretary of WPSA-APN and chair of the local organising committee, supporting conference planning, partnerships, sponsorship, coordination and knowledge exchange. SEAD1 was among the conference sponsors.",
     role:
-      "Dr Swatson served as WPSA-APN Secretary and chair of the local organising committee. SEAD1 was among the conference sponsors. The conference was organised through WPSA-APN, not solely by SEAD1.",
+      "WPSA-APN conference, with SEAD1 leadership support and sponsorship.",
+    attribution:
+      "Conference ownership rests with WPSA-APN and its organisers; SEAD1 is not presented as the sole organiser.",
     category: "past",
     icon: Globe,
   },
 
-  // =========================
-  // UPCOMING PROJECTS
-  // =========================
+  // ONGOING PROJECTS
+  {
+    title:
+      "AGRA – Facilitation Framework for Agricultural Development Meetings and Workshops",
+    location: "International Development Partnerships & Technical Advisory Services",
+    period: "2026–Present",
+    theme: "International Development Partnerships & Technical Advisory Services",
+    description:
+      "Dr Harry Kofi Swatson, Founder of SEAD1, entered into an individual facilitation consultancy framework agreement with AGRA on 30 September 2026 (Framework Agreement No. 263266). The framework enables potential assignments facilitating meetings, workshops and retreats involving stakeholder dialogue, programme planning and collaborative decision-making.",
+    role:
+      "Individual AGRA facilitation consultancy framework agreement held by Dr Swatson.",
+    attribution:
+      "This is an individual framework agreement held by Dr Swatson, not a SEAD1 corporate contract. No completed AGRA facilitation assignment is claimed. Specific work is subject to an AGRA call-off agreement and purchase order.",
+    status:
+      "Framework agreement status only. Delivery of specific assignments depends on future AGRA call-offs and purchase orders.",
+    category: "ongoing",
+    icon: Handshake,
+  },
 
+  // UPCOMING PROJECTS
   {
     title: "4th Pan-African Poultry Conference (PPC4)",
     location: "University of Ghana, Accra, Ghana",
     period: "3–4 August 2027",
-    theme: "Connecting Africa Through Agricultural Science",
+    theme: "Connecting Africa — Poultry Science",
     description:
-      "An upcoming continental gathering of poultry science, industry and policy stakeholders, creating opportunities for scientific exchange, institutional partnerships and agricultural knowledge sharing.",
+      "An upcoming continental convening of poultry science, industry and policy stakeholders, organised within the WPSA-APN network with Ghana host arrangements. Dr Swatson participates through his role as WPSA-APN Secretary.",
     role:
-      "Dr Swatson participates through his role as Secretary of WPSA-APN. The conference is organised within the WPSA-APN network with Ghana host arrangements.",
+      "Upcoming conference participation through Dr Swatson’s WPSA-APN Secretary role.",
+    attribution:
+      "The conference is upcoming and must not be represented as already delivered.",
     category: "upcoming",
     icon: Globe,
   },
 ];
 
-// NOTE: Add confirmed projects to the ongoing category
-// when their status has been verified.
+const categoryLabels: Record<ProjectCategory, string> = {
+  past: "Past Projects",
+  ongoing: "Ongoing Projects",
+  upcoming: "Upcoming Projects",
+};
 
-const Projects: React.FC = () => {
+function Projects() {
   const [activeCategory, setActiveCategory] =
     useState<ProjectCategory>("past");
 
@@ -249,215 +244,218 @@ const Projects: React.FC = () => {
     (project) => project.category === activeCategory
   );
 
-  const tabs: {
-    label: string;
-    value: ProjectCategory;
-  }[] = [
-    { label: "Past Projects", value: "past" },
-    { label: "Ongoing Projects", value: "ongoing" },
-    { label: "Upcoming Projects", value: "upcoming" },
-  ];
+  const projectCounts: Record<ProjectCategory, number> = {
+    past: projects.filter((project) => project.category === "past").length,
+    ongoing: projects.filter((project) => project.category === "ongoing")
+      .length,
+    upcoming: projects.filter((project) => project.category === "upcoming")
+      .length,
+  };
 
   return (
-    <div className="projects-page">
-
-      {/* PROJECTS HERO */}
+    <main className="projects-page">
+      {/* HERO SECTION */}
       <section className="projects-hero">
-        <div className="projects-hero-content">
-          <span className="projects-label">
-            OUR EXPERIENCE AND IMPACT
-          </span>
-
-          <h1>
-            Transforming Ideas Into
-            <span> Lasting Impact.</span>
-          </h1>
-
-          <p>
-            Explore SEAD1's agricultural, environmental
-            and community development portfolio.
-            Our work connects practical implementation,
-            research, partnerships and sustainable
-            development across communities and Africa.
-          </p>
-
-          <a href="#project-portfolio" className="project-hero-btn">
-            Explore Our Portfolio
-            <ArrowRight size={18} />
-          </a>
-        </div>
-
-        <div className="projects-hero-image">
-          <img
-            src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=1200"
-            alt="Agricultural landscape"
-          />
-        </div>
-      </section>
-
-      {/* PORTFOLIO INTRODUCTION */}
-      <section className="portfolio-intro">
-        <span className="projects-label">OUR PORTFOLIO</span>
-        <h2>Our Projects and Initiatives</h2>
-
-        <p>
-          SEAD1's portfolio reflects work in agricultural
-          production, farmer support, rural enterprise
-          development, school and community agriculture,
-          environmental restoration and continental
-          agricultural knowledge exchange.
-        </p>
-
-        <p className="portfolio-note">
-          Project descriptions distinguish direct SEAD1
-          assignments from institutional and partner-led
-          work associated with our leadership.
-        </p>
-      </section>
-
-      {/* PROJECT CATEGORY FILTER */}
-      <section className="project-portfolio" id="project-portfolio">
-
-        <div className="project-tabs">
-          {tabs.map((tab) => (
-            <button
-              key={tab.value}
-              className={
-                activeCategory === tab.value
-                  ? "project-tab active"
-                  : "project-tab"
-              }
-              onClick={() => setActiveCategory(tab.value)}
-            >
-              {tab.label}
-            </button>
-          ))}
-        </div>
-
-        <div className="project-results-heading">
-          <div>
-            <span className="projects-label">
-              SEAD1 PROJECT PORTFOLIO
+        <div className="projects-hero-overlay">
+          <div className="projects-container projects-hero-content">
+            <span className="projects-eyebrow">
+              Our Experience and Impact
             </span>
 
+            <h1>Our Projects</h1>
+
+            <p>
+              From strengthening rural agricultural enterprises to advancing
+              environmental sustainability, SEAD1 contributes to initiatives
+              that transform land, livelihoods and learning.
+            </p>
+
+            <a href="#project-portfolio" className="projects-hero-button">
+              Explore Our Portfolio
+              <ArrowRight size={18} />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* INTRODUCTION */}
+      <section className="projects-intro">
+        <div className="projects-container">
+          <div className="projects-intro-content">
+            <span className="section-kicker">Our Work</span>
             <h2>
-              {tabs.find(
-                (tab) => tab.value === activeCategory
-              )?.label}
+              Practical Solutions. <span>Lasting Impact.</span>
             </h2>
+
+            <p>
+              SEAD1's project experience spans agricultural development,
+              farmer support, enterprise development, youth education,
+              environmental management and international collaboration.
+              Our portfolio includes direct SEAD1 assignments as well as
+              professional work undertaken by our founder through previous
+              institutional and partner engagements.
+            </p>
+
+            <p>
+              We distinguish these different forms of involvement so that
+              project roles and achievements are represented accurately.
+            </p>
           </div>
 
-          <span className="project-count">
-            {filteredProjects.length}{" "}
-            {filteredProjects.length === 1 ? "Project" : "Projects"}
-          </span>
-        </div>
+          <div className="projects-summary">
+            <div className="projects-summary-item">
+              <Sprout size={28} />
+              <strong>{projectCounts.past}</strong>
+              <span>Past Projects</span>
+            </div>
 
-        {filteredProjects.length > 0 ? (
-          <div className="project-grid">
-            {filteredProjects.map((project) => {
-              const Icon = project.icon;
+            <div className="projects-summary-item">
+              <Handshake size={28} />
+              <strong>{projectCounts.ongoing}</strong>
+              <span>Ongoing Frameworks</span>
+            </div>
+
+            <div className="projects-summary-item">
+              <Globe size={28} />
+              <strong>{projectCounts.upcoming}</strong>
+              <span>Upcoming Initiatives</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* PROJECT PORTFOLIO */}
+      <section className="project-portfolio" id="project-portfolio">
+        <div className="projects-container">
+          <div className="project-section-heading">
+            <span className="section-kicker">Project Portfolio</span>
+            <h2>Explore Our Projects</h2>
+            <p>
+              Browse our past work, current engagements and upcoming
+              initiatives.
+            </p>
+          </div>
+
+          {/* CATEGORY FILTERS */}
+          <div className="project-tabs" role="tablist" aria-label="Project categories">
+            {(Object.keys(categoryLabels) as ProjectCategory[]).map(
+              (category) => (
+                <button
+                  key={category}
+                  type="button"
+                  role="tab"
+                  aria-selected={activeCategory === category}
+                  className={`project-tab ${
+                    activeCategory === category ? "active" : ""
+                  }`}
+                  onClick={() => setActiveCategory(category)}
+                >
+                  {categoryLabels[category]}
+                  <span className="project-tab-count">
+                    {projectCounts[category]}
+                  </span>
+                </button>
+              )
+            )}
+          </div>
+
+          {/* PROJECT CARDS */}
+          <div className="projects-grid">
+            {filteredProjects.map((project, index) => {
+              const ProjectIcon = project.icon;
 
               return (
                 <article
                   className="project-card"
-                  key={project.title}
+                  key={`${project.category}-${project.title}`}
                 >
                   <div className="project-card-top">
                     <div className="project-card-icon">
-                      <Icon size={28} />
+                      <ProjectIcon size={27} strokeWidth={1.8} />
                     </div>
 
                     <span className={`status-badge ${project.category}`}>
-                      {project.category === "past"
-                        ? "Completed / Past"
-                        : project.category === "ongoing"
-                        ? "Ongoing"
-                        : "Upcoming"}
+                      {categoryLabels[project.category]}
                     </span>
                   </div>
 
-                  <span className="project-theme">
-                    {project.theme}
-                  </span>
+                  <div className="project-card-content">
+                    <span className="project-theme">{project.theme}</span>
 
-                  <h3>{project.title}</h3>
+                    <h3>{project.title}</h3>
 
-                  <div className="project-meta">
-                    <span>
-                      <MapPin size={15} />
-                      {project.location}
-                    </span>
+                    <div className="project-meta">
+                      <span>
+                        <MapPin size={15} />
+                        {project.location}
+                      </span>
 
-                    <span>
-                      <CalendarDays size={15} />
-                      {project.period}
-                    </span>
+                      <span>
+                        <CalendarDays size={15} />
+                        {project.period}
+                      </span>
+                    </div>
+
+                    <p className="project-description">
+                      {project.description}
+                    </p>
+
+                    <div className="project-role">
+                      <strong>Role / Attribution</strong>
+                      <p>{project.role}</p>
+                    </div>
+
+                    {project.status && (
+                      <div className="project-status">
+                        <strong>Framework Status</strong>
+                        <p>{project.status}</p>
+                      </div>
+                    )}
+
+                    {project.attribution && (
+                      <p className="project-attribution">
+                        {project.attribution}
+                      </p>
+                    )}
                   </div>
-
-                  <p className="project-description">
-                    {project.description}
-                  </p>
-
-                  <div className="project-role">
-                    <strong>SEAD1 / Leadership Role</strong>
-                    <p>{project.role}</p>
-                  </div>
-
                 </article>
               );
             })}
           </div>
-        ) : (
-          <div className="empty-projects">
-            <div className="empty-project-icon">
-              <Sprout size={38} />
+
+          {filteredProjects.length === 0 && (
+            <div className="projects-empty">
+              <Sprout size={42} />
+              <h3>No projects listed in this category yet</h3>
+              <p>
+                New project information will be added here as it becomes
+                available.
+              </p>
             </div>
-
-            <h3>No Projects Listed Yet</h3>
-
-            <p>
-              There are currently no projects explicitly
-              identified as ongoing in the supplied
-              SEAD1 project portfolio. Please check back
-              for updates as new project information
-              becomes available.
-            </p>
-
-            <NavLink to="/contact" className="empty-project-link">
-              Contact SEAD1
-              <ArrowRight size={17} />
-            </NavLink>
-          </div>
-        )}
-
-      </section>
-
-      {/* PROJECT PORTFOLIO CTA */}
-      <section className="projects-cta">
-        <div>
-          <span>LET'S WORK TOGETHER</span>
-
-          <h2>
-            Have an Agricultural or Environmental
-            Development Project?
-          </h2>
-
-          <p>
-            Partner with SEAD1 to develop practical,
-            sustainable solutions that transform
-            communities and strengthen livelihoods.
-          </p>
+          )}
         </div>
-
-        <NavLink to="/contact" className="projects-cta-button">
-          Discuss Your Project
-          <ArrowRight size={18} />
-        </NavLink>
       </section>
 
-    </div>
+      {/* CALL TO ACTION */}
+      <section className="projects-cta">
+        <div className="projects-container projects-cta-content">
+          <div>
+            <span className="projects-eyebrow">Work With SEAD1</span>
+            <h2>Let's Build Sustainable Solutions Together</h2>
+            <p>
+              Partner with us to turn agricultural and environmental
+              development ambitions into practical initiatives.
+            </p>
+          </div>
+
+          <NavLink to="/contact" className="projects-cta-button">
+            Get in Touch
+            <ArrowRight size={18} />
+          </NavLink>
+        </div>
+      </section>
+    </main>
   );
-};
+}
 
 export default Projects;

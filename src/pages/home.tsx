@@ -4,8 +4,6 @@ import { NavLink } from "react-router-dom";
 import {
   Sprout,
   Leaf,
-  Droplets,
-  Trees,
   ArrowRight,
   ShieldCheck,
   Tractor,
