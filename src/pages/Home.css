@@ -1,0 +1,419 @@
+
+/* GENERAL */
+.home-page {
+    width: 100%;
+    color: #26382b;
+    font-family: Arial, sans-serif;
+  }
+  
+  .home-page section {
+    padding: 85px 8%;
+  }
+  
+  .home-page p {
+    line-height: 1.8;
+    color: #647568;
+  }
+  
+  /* HERO SECTION */
+  .hero {
+    min-height: 580px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 55px;
+    background: #f1f7ef;
+  }
+  
+  .hero-content {
+    max-width: 600px;
+  }
+  
+  .hero-label,
+  .section-label {
+    color: #39834b;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+  
+  .hero h1 {
+    font-size: clamp(38px, 5vw, 60px);
+    line-height: 1.15;
+    margin: 25px 0;
+    color: #203c29;
+  }
+  
+  .hero h1 span,
+  .section-heading h2 span {
+    color: #39834b;
+  }
+  
+  .hero-content > p {
+    font-size: 16px;
+    max-width: 520px;
+  }
+  
+  .hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+  }
+  
+  .btn-primary,
+  .btn-secondary,
+  .cta-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px 23px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+  }
+  
+  .btn-primary {
+    background: #39834b;
+    color: white;
+  }
+  
+  .btn-primary:hover {
+    background: #245c34;
+    transform: translateY(-3px);
+  }
+  
+  .btn-secondary {
+    border: 1px solid #39834b;
+    color: #39834b;
+  }
+  
+  .btn-secondary:hover {
+    background: #39834b;
+    color: white;
+  }
+  
+  .hero-trust {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 35px;
+    color: #39834b;
+    font-size: 13px;
+  }
+  
+  .hero-image {
+    position: relative;
+  }
+  
+  .hero-image img {
+    width: 100%;
+    height: 440px;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+  
+  .hero-image-card {
+    position: absolute;
+    bottom: 20px;
+    left: -25px;
+    background: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-radius: 8px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+    color: #39834b;
+  }
+  
+  .hero-image-card div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .hero-image-card strong {
+    color: #26382b;
+    font-size: 14px;
+  }
+  
+  .hero-image-card span {
+    color: #718073;
+    font-size: 12px;
+  }
+  
+  /* SECTION HEADINGS */
+  .section-heading {
+    max-width: 700px;
+    margin: 0 auto 50px;
+    text-align: center;
+  }
+  
+  .section-heading h2 {
+    font-size: 36px;
+    margin: 15px 0;
+    color: #263f2d;
+  }
+  
+  .section-heading p {
+    font-size: 15px;
+  }
+  
+  /* ABOUT SECTION */
+  .about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+  }
+  
+  .about-image img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  
+  .about-text h3 {
+    font-size: 27px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    color: #263f2d;
+  }
+  
+  .about-text p {
+    margin-bottom: 18px;
+  }
+  
+  .text-link {
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+    color: #39834b;
+    text-decoration: none;
+    font-weight: 700;
+    margin-top: 15px;
+  }
+  
+  /* SERVICES */
+  .services-section {
+    background: #f5f8f3;
+  }
+  
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+  }
+  
+  .service-card {
+    background: white;
+    padding: 30px 22px;
+    border-radius: 8px;
+    transition: 0.3s;
+    border: 1px solid #e7eee5;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.07);
+  }
+  
+  .service-icon {
+    width: 65px;
+    height: 65px;
+    background: #e9f4e9;
+    color: #39834b;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 22px;
+  }
+  
+  .service-card h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #263f2d;
+  }
+  
+  .service-card p {
+    font-size: 13px;
+    min-height: 105px;
+  }
+  
+  .service-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 15px;
+    color: #39834b;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+  }
+  
+  /* MISSION */
+  .mission-section {
+    background:
+      linear-gradient(rgba(20, 58, 30, 0.88),
+                      rgba(20, 58, 30, 0.88)),
+      url("https://images.unsplash.com/photo-1472396961693-142e6e269027?w=1600")
+      center/cover no-repeat;
+    text-align: center;
+    color: white;
+  }
+  
+  .mission-content {
+    max-width: 750px;
+    margin: auto;
+  }
+  
+  .mission-section .section-label {
+    color: #a9d8a9;
+  }
+  
+  .mission-content h2 {
+    font-size: 38px;
+    line-height: 1.3;
+    margin: 20px 0;
+  }
+  
+  .mission-content p {
+    color: #e0e9e0;
+    margin-bottom: 30px;
+  }
+  
+  /* VALUES */
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+  
+  .value-card {
+    text-align: center;
+    padding: 30px;
+  }
+  
+  .value-card svg {
+    color: #39834b;
+    margin-bottom: 20px;
+  }
+  
+  .value-card h3 {
+    color: #263f2d;
+    font-size: 19px;
+    margin-bottom: 15px;
+  }
+  
+  .value-card p {
+    font-size: 14px;
+  }
+  
+  /* CONTACT CTA */
+  .contact-cta {
+    background: #eaf3e8;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+  }
+  
+  .contact-cta span {
+    color: #39834b;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+  
+  .contact-cta h2 {
+    color: #263f2d;
+    font-size: 30px;
+    margin: 15px 0;
+  }
+  
+  .contact-cta p {
+    margin: 0;
+  }
+  
+  .cta-button {
+    background: #39834b;
+    color: white;
+    white-space: nowrap;
+  }
+  
+  /* RESPONSIVE DESIGN */
+  @media (max-width: 1000px) {
+    .services-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .hero {
+      gap: 30px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .home-page section {
+      padding: 60px 5%;
+    }
+  
+    .hero,
+    .about-content {
+      grid-template-columns: 1fr;
+    }
+  
+    .hero-image img {
+      height: 350px;
+    }
+  
+    .hero-image-card {
+      left: 10px;
+    }
+  
+    .about-content {
+      gap: 30px;
+    }
+  
+    .values-grid {
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+  
+    .contact-cta {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .mission-content h2 {
+      font-size: 30px;
+    }
+  }
+  
+  @media (max-width: 500px) {
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    .hero h1 {
+      font-size: 38px;
+    }
+  
+    .hero-image img {
+      height: 280px;
+    }
+  
+    .section-heading h2 {
+      font-size: 28px;
+    }
+  
+    .contact-cta h2 {
+      font-size: 25px;
+    }
+  }
+  

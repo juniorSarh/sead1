@@ -93,9 +93,9 @@ const socialLinks = [
           <div className="footer-contact">
             <MapPin size={20} />
             <p>
-              123 Business Street,
+              1 Wensleydale Road,
               <br />
-              Durban, KwaZulu-Natal,
+              Pietermartzburg, KwaZulu-Natal,
               <br />
               South Africa.
             </p>
@@ -108,15 +108,15 @@ const socialLinks = [
 
           <div className="footer-contact">
             <Phone size={20} />
-            <a href="tel:+27123456789">
-              +27 12 345 6789
+            <a href="tel:+27837628221">
+              +27 83 762 8221
             </a>
           </div>
 
           <div className="footer-contact">
             <Mail size={20} />
-            <a href="mailto:info@yourcompany.co.za">
-              info@yourcompany.co.za
+            <a href="mailto:harry.sead1@gmail.com">
+              harry.sead1@gmail.com
             </a>
           </div>
         </div>
@@ -141,7 +141,7 @@ const socialLinks = [
       {/* Copyright */}
       <div className="footer-bottom">
         <p>
-          © {new Date().getFullYear()} YourCompany.
+          © {new Date().getFullYear()} SEAD1.
           All Rights Reserved.
         </p>
       </div>
