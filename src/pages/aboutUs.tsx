@@ -60,36 +60,36 @@ const teamMembers = [
   },
 ];
 
-const programmeAssociates = [
-  {
-    name: "Dr Mary-Ann N. Nhleko",
-    role: "Quality Assurance / Internal Moderation",
-  },
-  {
-    name: "Fikani Mthembu",
-    role: "Programme Management and Agricultural Facilitation",
-  },
-  {
-    name: "Nkosinathi “Thami” Sithole",
-    role: "Senior Assessment / Facilitation",
-  },
-  {
-    name: "Henry Cook",
-    role: "Senior Assessment / Moderation",
-  },
-  {
-    name: "Thobeka Sithole",
-    role: "Practical Agricultural Facilitation",
-  },
-  {
-    name: "Londiwe E. Zuma",
-    role: "Agricultural Training Facilitation",
-  },
-  {
-    name: "Lwazi Xolani Zulu",
-    role: "Administration and Learner Records",
-  },
-];
+// const programmeAssociates = [
+//   {
+//     name: "Dr Mary-Ann N. Nhleko",
+//     role: "Quality Assurance / Internal Moderation",
+//   },
+//   {
+//     name: "Fikani Mthembu",
+//     role: "Programme Management and Agricultural Facilitation",
+//   },
+//   {
+//     name: "Nkosinathi “Thami” Sithole",
+//     role: "Senior Assessment / Facilitation",
+//   },
+//   {
+//     name: "Henry Cook",
+//     role: "Senior Assessment / Moderation",
+//   },
+//   {
+//     name: "Thobeka Sithole",
+//     role: "Practical Agricultural Facilitation",
+//   },
+//   {
+//     name: "Londiwe E. Zuma",
+//     role: "Agricultural Training Facilitation",
+//   },
+//   {
+//     name: "Lwazi Xolani Zulu",
+//     role: "Administration and Learner Records",
+//   },
+// ];
 
 const values = [
   {
