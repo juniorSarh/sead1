@@ -1,6 +1,7 @@
 
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
+import logo from "../assets/image.png";
 
 const Navbar = () => {
   const navLinks = [
@@ -14,6 +15,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-logo">
+        <img src={logo} alt="SEAD1 Logo" />
         <h2>SEAD1</h2>
       </div>
 

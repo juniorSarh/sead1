@@ -14,6 +14,7 @@ import {
   BriefcaseBusiness,
   Microscope,
 } from "lucide-react";
+import leadership from "../assets/team/swatson.jpeg"
 
 import "./Home.css";
 
@@ -357,7 +358,7 @@ const Home: React.FC = () => {
       <section className="leadership-section">
         <div className="leadership-image">
           <img
-            src=""
+            src={leadership}
             alt="Professional leadership portrait placeholder"
           />
         </div>

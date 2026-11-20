@@ -59,3 +59,23 @@
     }
   }
   
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .navbar-logo img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+  }
+  
+  .navbar-logo h2 {
+    margin: 0;
+    color: #ffff;
+    font-size: 26px;
+    font-weight: 700;
+  }
+  

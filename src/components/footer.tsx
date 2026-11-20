@@ -1,5 +1,4 @@
 
-
 import React from "react";
 import { NavLink } from "react-router-dom";
 
@@ -16,8 +15,8 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 
+import logo from "../assets/image.png";
 import "./Footer.css";
-
 
 const Footer: React.FC = () => {
   const quickLinks = [
@@ -27,9 +26,7 @@ const Footer: React.FC = () => {
     { name: "Contact", path: "/contact" },
   ];
 
-  
-  
-const socialLinks = [
+  const socialLinks = [
     {
       name: "Facebook",
       icon: FaFacebookF,
@@ -51,8 +48,6 @@ const socialLinks = [
       url: "",
     },
   ];
-  
-
 
   return (
     <footer className="footer">
@@ -60,11 +55,16 @@ const socialLinks = [
 
         {/* Company Information */}
         <div className="footer-section company-info">
-          <h2>SEAD1</h2>
+
+          <div className="footer-logo">
+            <img src={logo} alt="SEAD1 Logo" />
+            <h2>SEAD1</h2>
+          </div>
 
           <p>
-            Providing quality services and professional
-            solutions to our valued clients.
+            Transforming Africa's Land, Livelihoods and Learning.
+            Promoting sustainable agriculture, environmental
+            development and community empowerment.
           </p>
 
           <div className="social-icons">
@@ -74,7 +74,7 @@ const socialLinks = [
               return (
                 <a
                   key={social.name}
-                  href={social.url}
+                  href={social.url || undefined}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={social.name}
@@ -95,7 +95,7 @@ const socialLinks = [
             <p>
               1 Wensleydale Road,
               <br />
-              Pietermartzburg, KwaZulu-Natal,
+              Pietermaritzburg, KwaZulu-Natal,
               <br />
               South Africa.
             </p>

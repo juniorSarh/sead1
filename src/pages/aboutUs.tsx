@@ -22,6 +22,7 @@ import {
 
 import "./About.css";
 
+
 const teamMembers = [
   {
     initials: "HS",

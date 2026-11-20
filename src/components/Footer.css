@@ -133,4 +133,26 @@
       padding-top: 40px;
     }
   }
+
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+  }
+  
+  .footer-logo img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+  }
+  
+  .footer-logo h2 {
+    margin: 0;
+    color: #ffffff;
+    font-size: 26px;
+    font-weight: 700;
+  }
+  
   
